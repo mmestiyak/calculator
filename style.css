@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 500;
+  min-height: 100vh;
+  background: linear-gradient(
+      120deg,
+      rgba(0, 119, 255, 0.494),
+      rgba(193, 15, 220, 0.707)
+    ),
+    url(./bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Comfortaa, sans-serif;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+}
+
+.calculator-grid .output {
+  border-radius: 2px;
+
+  grid-column: 1 / -1;
+  background: hsl(200, 100%, 50%);
+  padding: 2em;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+  
+}
+.output .previous-calculation {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.output .current-calculation {
+  font-size: 2.5rem;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+button {
+  padding: 1em 0.5em;
+  font-size: 1.5rem;
+  background: rgb(255, 255, 255);
+  color: #000;
+  border: 1.3px solid #eee;
+  outline: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #eee;
+  border-color: #fff;
+}
